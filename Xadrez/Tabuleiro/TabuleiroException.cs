@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Xadrez.tabuleiro
+namespace tabuleiro
 {
-    class TabuleiroException
+    //Criando Exception personalizado 
+    class TabuleiroException : Exception
     {
+        public TabuleiroException(string msg) : base(msg)
+        {
+
+        }
+
     }
 }
