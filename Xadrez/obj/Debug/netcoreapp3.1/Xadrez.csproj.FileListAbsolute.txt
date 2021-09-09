@@ -1,0 +1,14 @@
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.exe
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.deps.json
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.runtimeconfig.json
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.runtimeconfig.dev.json
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.dll
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\bin\Debug\netcoreapp3.1\Xadrez.pdb
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.csproj.AssemblyReference.cache
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.AssemblyInfoInputs.cache
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.AssemblyInfo.cs
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.csproj.CoreCompileInputs.cache
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.dll
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.pdb
+C:\Users\vinic\OneDrive\Área de Trabalho\C#\Xadrez\Xadrez\obj\Debug\netcoreapp3.1\Xadrez.genruntimeconfig.cache
