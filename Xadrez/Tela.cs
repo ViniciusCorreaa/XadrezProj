@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
+using xadrez;
 
 namespace Xadrez
 {
@@ -35,6 +36,18 @@ namespace Xadrez
 
         }
             
+        public static PosicaoXadrez lerPosicaoXadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
+        }
+
+
+
+
+
         //Definindo a cor ao imprimir a peça
             public static void imprimirPeca(Peca peca)
         {   

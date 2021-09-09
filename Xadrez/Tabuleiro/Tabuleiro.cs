@@ -50,6 +50,21 @@ namespace tabuleiro
             p.posicao = pos;
         }
 
+        //Retirando uma peça do tabuleiro
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos)== null)
+            {
+                return null;
+            }
+            
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
+        }
+        
+
         //Avaliando se a posição digitada está correta.
         public bool posicaoValida(Posicao pos)
         {
