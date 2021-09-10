@@ -16,13 +16,25 @@ namespace Xadrez
             imprimirPecasCapturadas(partida);
 
             Console.WriteLine("Turno: " + partida.turno);
-            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
 
-            if (partida.xeque)
+            if (!partida.terminada)
             {
-                Console.WriteLine();
-                Console.WriteLine("Xeque!");
+
+                Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+
+                if (partida.xeque)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Xeque!");
+                }
+
             }
+            else
+            {
+                Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
+            }
+           
 
 
         }
@@ -117,10 +129,6 @@ namespace Xadrez
             int linha = int.Parse(s[1] + "");
             return new PosicaoXadrez(coluna, linha);
         }
-
-
-
-
 
         //Definindo a cor ao imprimir a peça
         public static void imprimirPeca(Peca peca)

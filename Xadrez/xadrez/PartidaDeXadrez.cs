@@ -83,11 +83,19 @@ namespace xadrez
             {
                 xeque = false;
             }
-          
-            turno++;//Incrementa o turno
-            
-            mudajogador();//Chama o metodo de alterar jogador
 
+
+            if (testeXequemate(adversaria(jogadorAtual)))
+            {
+                terminada = true; //Fim da partida
+            }
+            else
+            {
+                turno++;//Incrementa o turno
+
+                mudajogador();//Chama o metodo de alterar jogador
+            }
+        
         }
 
         //Controle de seleção da posição de origem
@@ -208,6 +216,44 @@ namespace xadrez
             return false;
         }
 
+        //Teste Xequemate
+        public bool testeXequemate(Cor cor)
+        {
+            if (!estaEmXeque(cor))
+            {
+                return false;
+            }
+
+            foreach (Peca x in pecasEmJogo(cor))
+            {
+                bool[,] mat = x.movimentosPossiveis();
+
+                for (int i = 0; i < tab.linhas; i++)
+                {
+                    for (int j = 0; j < tab.colunas; j++)
+                    {
+                        if (mat[i, j])
+                        {
+                            Posicao origem = x.posicao;
+                            Posicao destino = new Posicao(i, j);
+                            Peca pecaCapturada = executaMovimento(origem, destino);
+
+                            bool testeXeque = estaEmXeque(cor);
+                            desfazMovimento(origem, destino, pecaCapturada);
+
+                            if (!testeXeque)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            //Todas as tentativas de sair do xeque falham então:
+            //Return true = Xequemate
+            return true;
+        }
+
 
         public void colocarNovapeca(char coluna, int linha, Peca peca)
         {
@@ -218,18 +264,18 @@ namespace xadrez
         private void colocarPecas()
         {
             colocarNovapeca('c', 1, new Torre(tab, Cor.Branca));
-            colocarNovapeca('c', 2, new Torre(tab, Cor.Branca));
-            colocarNovapeca('d', 2, new Torre(tab, Cor.Branca));
-            colocarNovapeca('e', 2, new Torre(tab, Cor.Branca));
-            colocarNovapeca('e', 1, new Torre(tab, Cor.Branca));
+            colocarNovapeca('h', 7, new Torre(tab, Cor.Branca));
+           // colocarNovapeca('d', 2, new Torre(tab, Cor.Branca));
+           // colocarNovapeca('e', 2, new Torre(tab, Cor.Branca));
+           // colocarNovapeca('e', 1, new Torre(tab, Cor.Branca));
             colocarNovapeca('d', 1, new Rei(tab, Cor.Branca));
 
-            colocarNovapeca('c', 7, new Torre(tab, Cor.Preta));
-            colocarNovapeca('c', 8, new Torre(tab, Cor.Preta));
-            colocarNovapeca('d', 7, new Torre(tab, Cor.Preta));
-            colocarNovapeca('e', 7, new Torre(tab, Cor.Preta));
-            colocarNovapeca('e', 8, new Torre(tab, Cor.Preta));
-            colocarNovapeca('d', 8, new Rei(tab, Cor.Preta));
+           // colocarNovapeca('c', 7, new Torre(tab, Cor.Preta));
+            colocarNovapeca('b', 8, new Torre(tab, Cor.Preta));
+           // colocarNovapeca('d', 7, new Torre(tab, Cor.Preta));
+           // colocarNovapeca('e', 7, new Torre(tab, Cor.Preta));
+           // colocarNovapeca('e', 8, new Torre(tab, Cor.Preta));
+            colocarNovapeca('a', 8, new Rei(tab, Cor.Preta));
 
 
         }
